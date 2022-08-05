@@ -1,5 +1,5 @@
-import { type } from "@testing-library/user-event/dist/type";
 import { Pie, PieChart, ResponsiveContainer } from "recharts";
+import './PieChart.css';
 
 type chartProps = {
     data: any,
@@ -23,5 +23,5 @@ const PieChartComponent = (props: chartProps) => {
     )
 }
 
-export { PieChartComponent };
+export default PieChartComponent;
 export type { chartProps };

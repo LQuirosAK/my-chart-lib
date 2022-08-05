@@ -1,5 +1,7 @@
 import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 import './App.css';
+import { chartProps } from './components';
+import PieChartComponent from './components/PieChart';
 
 function App() {
 
@@ -56,15 +58,19 @@ function App() {
     }
   ];
 
+  const props: chartProps = {
+    data: data01,
+    fillColor: "#c14512",
+    cx: '50%',
+    cy: '50%',
+    dataKey: 'value',
+    nameKey: 'name'
+
+  }
+
   return (
     <div>
-      <h1>My Chart Lib</h1>
-      <ResponsiveContainer height={250}>
-        <PieChart>
-          <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" fill="#8884d8" label/>
-          {/* <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label /> */}
-        </PieChart>
-      </ResponsiveContainer>
+      <PieChartComponent {...props}></PieChartComponent>
     </div>
   );
 }

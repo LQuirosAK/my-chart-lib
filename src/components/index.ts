@@ -1,2 +1,2 @@
-export type {chartProps} from './PieChart'
-export  {PieChartComponent} from './PieChart'
+export { default as PieChart } from "./PieChart";
+export type {chartProps} from  './PieChart';
